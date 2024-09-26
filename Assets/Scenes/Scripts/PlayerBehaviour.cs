@@ -47,14 +47,14 @@ public class PlayerBehaviour : MonoBehaviour
         {
             contadorDeMonedas = contadorDeMonedas + 1;
             Debug.Log("Ahora tienes " + contadorDeMonedas + " monedas");
-            coinText.text = contadorDeMonedas.ToString();
+            coinText.text = "Monedicas:" + contadorDeMonedas.ToString();
         }
         //moneda especial
         if (other.CompareTag("SpecialCoinItem"))
         {
             contadorDeMonedas = contadorDeMonedas + 5;
             Debug.Log("Ahora tienes " + contadorDeMonedas + " monedas");
-            coinText.text = contadorDeMonedas.ToString();
+            coinText.text = "Monedas: " + contadorDeMonedas.ToString();
         }
 
         other.gameObject.SetActive(false);
