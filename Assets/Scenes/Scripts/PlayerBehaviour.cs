@@ -9,9 +9,10 @@ public class PlayerBehaviour : MonoBehaviour
     public float movimientoPj = 5f;
     public int contadorDeMonedas = 0;
     Rigidbody rbJugador;
-    public bool enElSuelo = false;
+    public bool enElSuelo;
     public TextMeshProUGUI coinText;
-
+    public AudioClip specialCoinSFX;
+    public AudioClip coinSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,24 +40,31 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Suelo"))
         {
+            Debug.Log("Estás en el suelo");
             enElSuelo = true;
         }
-            
+        else
+            enElSuelo = false;
+
         //moneda normal
         if (other.CompareTag("CoinItem"))
         {
             contadorDeMonedas = contadorDeMonedas + 1;
             Debug.Log("Ahora tienes " + contadorDeMonedas + " monedas");
-            coinText.text = "Monedicas:" + contadorDeMonedas.ToString();
+            AudioSource.PlayClipAtPoint(coinSFX, transform.position);
         }
         //moneda especial
-        if (other.CompareTag("SpecialCoinItem"))
+        else if (other.CompareTag("SpecialCoinItem"))
         {
             contadorDeMonedas = contadorDeMonedas + 5;
             Debug.Log("Ahora tienes " + contadorDeMonedas + " monedas");
+            AudioSource.PlayClipAtPoint(specialCoinSFX, transform.position);
+        }
+        if (other.tag.Contains("Coin"))
+        {
+            other.gameObject.SetActive(false);
             coinText.text = "Monedas: " + contadorDeMonedas.ToString();
         }
-
-        other.gameObject.SetActive(false);
+        
     }
 }
