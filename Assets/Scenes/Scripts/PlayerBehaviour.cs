@@ -8,20 +8,21 @@ public class PlayerBehaviour : MonoBehaviour
     public float fuerzaDeSalto = 10f;
     public float movimientoPj = 5f;
     public int contadorDeMonedas = 0;
-    Rigidbody rbJugador;
+    private Rigidbody rbJugador;
     public bool enElSuelo;
     public TextMeshProUGUI coinText;
     public AudioClip specialCoinSFX;
     public AudioClip coinSFX;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rbJugador = GetComponent<Rigidbody>();
         enElSuelo = false;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         //Salto
         if (Input.GetKeyDown(KeyCode.Space) && enElSuelo == true)
@@ -40,7 +41,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Suelo"))
         {
-            Debug.Log("Estás en el suelo");
+           // Debug.Log("Esta en el suelo");
             enElSuelo = true;
         }
         else

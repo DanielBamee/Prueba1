@@ -6,13 +6,12 @@ using UnityEngine;
 public class DetectorDeColisiones : MonoBehaviour
 {
     [SerializeField]
-    Material materialRojo;
+    private Material materialRojo;
     
     [SerializeField]
-    Material materialBlanco;
-
-    bool paredRoja = false;
-    float tiempoEnRojo = 5f;
+    private Material materialBlanco;
+    private bool paredRoja = false;
+    private float tiempoEnRojo = 5f;
 
     private void Update()
     {
@@ -31,7 +30,7 @@ public class DetectorDeColisiones : MonoBehaviour
 
     private void OnCollisionEnter(Collision detectorColision)
     {
-        if (detectorColision.gameObject.tag == "Player")
+        if (detectorColision.gameObject.CompareTag("Player"))
         {
             gameObject.GetComponent<MeshRenderer>().material = materialRojo;
             paredRoja=true;

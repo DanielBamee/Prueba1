@@ -5,20 +5,20 @@ using UnityEngine;
 public class MiPrimerScript : MonoBehaviour
 {
     //tipo de dato >> nombre >> ;
-    int numeroDeSaltos = 0;
+    private int numeroDeSaltos = 0;
 
     public int primeroLogroSaltos = 5;
     public int segundoLogroSaltos = 10;
     public int tercerLogroSaltos = 15;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
