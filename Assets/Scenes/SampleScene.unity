@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45010334, g: 0.49761105, b: 0.5618343, a: 1}
+  m_IndirectSpecularColor: {r: 0.45010293, g: 0.49761075, b: 0.5618339, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -255,10 +255,11 @@ GameObject:
   - component: {fileID: 105593344}
   - component: {fileID: 105593347}
   - component: {fileID: 105593346}
+  - component: {fileID: 105593348}
   - component: {fileID: 105593345}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -349,6 +350,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105593343}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &105593348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105593343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!1 &126368087
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +375,7 @@ GameObject:
   - component: {fileID: 126368088}
   m_Layer: 0
   m_Name: ObstaculosRotatorios
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,7 +415,7 @@ GameObject:
   - component: {fileID: 154902981}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -557,10 +572,11 @@ GameObject:
   - component: {fileID: 245070261}
   - component: {fileID: 245070260}
   - component: {fileID: 245070259}
+  - component: {fileID: 245070262}
   - component: {fileID: 245070258}
   m_Layer: 0
   m_Name: Pared1
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -651,6 +667,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1636952498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &245070262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245070257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!1 &360587654
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,9 +818,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 368948252}
+  - component: {fileID: 368948253}
   m_Layer: 0
   m_Name: Laberinto
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -814,6 +845,27 @@ Transform:
   - {fileID: 1494952713}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &368948253
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368948251}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &434377971
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,10 +877,11 @@ GameObject:
   - component: {fileID: 434377972}
   - component: {fileID: 434377975}
   - component: {fileID: 434377974}
+  - component: {fileID: 434377976}
   - component: {fileID: 434377973}
   m_Layer: 0
   m_Name: Cube (6)
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -919,6 +972,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434377971}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &434377976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434377971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!1 &436266975
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,10 +997,11 @@ GameObject:
   - component: {fileID: 436266979}
   - component: {fileID: 436266978}
   - component: {fileID: 436266977}
+  - component: {fileID: 436266980}
   - component: {fileID: 436266976}
   m_Layer: 0
   m_Name: Pared4
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1024,6 +1092,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1636952498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &436266980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436266975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!1 &536942336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,7 +1301,7 @@ GameObject:
   - component: {fileID: 645086337}
   m_Layer: 0
   m_Name: Puerta
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1680,10 +1762,11 @@ GameObject:
   - component: {fileID: 829799627}
   - component: {fileID: 829799630}
   - component: {fileID: 829799629}
+  - component: {fileID: 829799631}
   - component: {fileID: 829799628}
   m_Layer: 0
   m_Name: Cube (7)
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1774,6 +1857,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829799626}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &829799631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829799626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!1 &870640064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,10 +1882,11 @@ GameObject:
   - component: {fileID: 870640068}
   - component: {fileID: 870640067}
   - component: {fileID: 870640066}
+  - component: {fileID: 870640069}
   - component: {fileID: 870640065}
   m_Layer: 0
   m_Name: Pared3
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1879,6 +1977,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1636952498}
   m_LocalEulerAnglesHint: {x: 0, y: 90.19, z: 0}
+--- !u!114 &870640069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870640064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!1 &916647686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,10 +2002,11 @@ GameObject:
   - component: {fileID: 916647687}
   - component: {fileID: 916647690}
   - component: {fileID: 916647689}
+  - component: {fileID: 916647691}
   - component: {fileID: 916647688}
   m_Layer: 0
   m_Name: Obstaculo3
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1907,7 +2020,7 @@ Transform:
   m_GameObject: {fileID: 916647686}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9192252, z: -0, w: 0.39373228}
-  m_LocalPosition: {x: -7.5096846, y: -2.2520742, z: 12.059236}
+  m_LocalPosition: {x: -7.5096846, y: -2.25, z: 12.059236}
   m_LocalScale: {x: 8.095969, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1984,6 +2097,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916647686}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &916647691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916647686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,10 +2397,11 @@ GameObject:
   - component: {fileID: 1268942244}
   - component: {fileID: 1268942247}
   - component: {fileID: 1268942246}
+  - component: {fileID: 1268942248}
   - component: {fileID: 1268942245}
   m_Layer: 0
   m_Name: Cube (14)
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2364,6 +2492,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268942243}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1268942248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268942243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!4 &1425483239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3640225641706844535, guid: f16ad6c5a519f084db4d8becbf9a13d6, type: 3}
@@ -2380,10 +2522,11 @@ GameObject:
   - component: {fileID: 1471013874}
   - component: {fileID: 1471013877}
   - component: {fileID: 1471013876}
+  - component: {fileID: 1471013878}
   - component: {fileID: 1471013875}
   m_Layer: 0
   m_Name: Cube (12)
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2474,6 +2617,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471013873}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1471013878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471013873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!1 &1477249630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,7 +2884,7 @@ GameObject:
   - component: {fileID: 1494952713}
   m_Layer: 0
   m_Name: ParedesInteriores
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2741,7 +2898,7 @@ Transform:
   m_GameObject: {fileID: 1494952712}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1203156, y: 1.6564783, z: 5.7307653}
+  m_LocalPosition: {x: -2.1203156, y: 1.6585525, z: 5.7307653}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2749,7 +2906,6 @@ Transform:
   - {fileID: 1859593852}
   - {fileID: 1471013874}
   - {fileID: 1268942244}
-  - {fileID: 1640048313}
   - {fileID: 434377972}
   - {fileID: 829799627}
   - {fileID: 1891323462}
@@ -2929,7 +3085,7 @@ GameObject:
   - component: {fileID: 1636952498}
   m_Layer: 0
   m_Name: ParedesExteriores
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2943,7 +3099,7 @@ Transform:
   m_GameObject: {fileID: 1636952497}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1203156, y: 1.6564783, z: 5.7307653}
+  m_LocalPosition: {x: -2.1203156, y: 1.6585525, z: 5.7307653}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2966,7 +3122,7 @@ GameObject:
   - component: {fileID: 1640048315}
   - component: {fileID: 1640048314}
   m_Layer: 0
-  m_Name: Cube (15)
+  m_Name: ZonaFinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2981,11 +3137,11 @@ Transform:
   m_GameObject: {fileID: 1640048312}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70577586, z: -0, w: 0.7084353}
-  m_LocalPosition: {x: 12.040316, y: -2.956478, z: 14.159235}
-  m_LocalScale: {x: 5.9310646, y: 0.48872367, z: 7.5704994}
+  m_LocalPosition: {x: 9.881543, y: -0.16232967, z: 16.062523}
+  m_LocalScale: {x: 5.9310665, y: 0.48872367, z: 7.570502}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1494952713}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 89.785, z: 0}
 --- !u!65 &1640048314
 BoxCollider:
@@ -3311,10 +3467,11 @@ GameObject:
   - component: {fileID: 1765444001}
   - component: {fileID: 1765444004}
   - component: {fileID: 1765444003}
+  - component: {fileID: 1765444005}
   - component: {fileID: 1765444002}
   m_Layer: 0
   m_Name: Obstaculo2
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3328,7 +3485,7 @@ Transform:
   m_GameObject: {fileID: 1765444000}
   serializedVersion: 2
   m_LocalRotation: {x: 0.005918373, y: 0.9228204, z: -0.012501367, w: -0.38498214}
-  m_LocalPosition: {x: -0.71968436, y: -2.2520742, z: -4.5307655}
+  m_LocalPosition: {x: -0.71968436, y: -2.25, z: -4.5307655}
   m_LocalScale: {x: 4.016175, y: 1, z: 0.39064}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3405,6 +3562,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765444000}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1765444005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765444000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!1 &1769581804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3416,10 +3587,11 @@ GameObject:
   - component: {fileID: 1769581805}
   - component: {fileID: 1769581808}
   - component: {fileID: 1769581807}
+  - component: {fileID: 1769581809}
   - component: {fileID: 1769581806}
   m_Layer: 0
   m_Name: Obstaculo1
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3433,7 +3605,7 @@ Transform:
   m_GameObject: {fileID: 1769581804}
   serializedVersion: 2
   m_LocalRotation: {x: 0.005918373, y: 0.9228204, z: -0.012501367, w: -0.38498214}
-  m_LocalPosition: {x: 7.1603155, y: -2.2520742, z: -2.8007653}
+  m_LocalPosition: {x: 7.1603155, y: -2.25, z: -2.8007653}
   m_LocalScale: {x: 5.6523643, y: 1, z: 0.39337006}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3510,6 +3682,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769581804}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1769581809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769581804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!1 &1789900379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3521,10 +3707,11 @@ GameObject:
   - component: {fileID: 1789900383}
   - component: {fileID: 1789900382}
   - component: {fileID: 1789900381}
+  - component: {fileID: 1789900384}
   - component: {fileID: 1789900380}
   m_Layer: 0
   m_Name: Pared2
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3615,6 +3802,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1636952498}
   m_LocalEulerAnglesHint: {x: 0, y: 90.19, z: 0}
+--- !u!114 &1789900384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789900379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!1 &1859593851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,10 +3827,11 @@ GameObject:
   - component: {fileID: 1859593852}
   - component: {fileID: 1859593855}
   - component: {fileID: 1859593854}
+  - component: {fileID: 1859593856}
   - component: {fileID: 1859593853}
   m_Layer: 0
   m_Name: Cube (8)
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3720,6 +3922,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859593851}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1859593856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859593851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!1 &1891323461
 GameObject:
   m_ObjectHideFlags: 0
@@ -3731,10 +3947,11 @@ GameObject:
   - component: {fileID: 1891323462}
   - component: {fileID: 1891323465}
   - component: {fileID: 1891323464}
+  - component: {fileID: 1891323466}
   - component: {fileID: 1891323463}
   m_Layer: 0
   m_Name: Cube (11)
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3825,6 +4042,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891323461}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1891323466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891323461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd97c9811cae44e8180245f2adb529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialRojo: {fileID: 2100000, guid: 6fda6fe7a19889f499f29f190e20b93b, type: 2}
+  materialBlanco: {fileID: 2100000, guid: 4db19ce2105bdc744bc2fed01aa4debf, type: 2}
 --- !u!1 &1981492214
 GameObject:
   m_ObjectHideFlags: 0
@@ -4457,3 +4688,4 @@ SceneRoots:
   - {fileID: 732006793}
   - {fileID: 368948252}
   - {fileID: 536942337}
+  - {fileID: 1640048313}
