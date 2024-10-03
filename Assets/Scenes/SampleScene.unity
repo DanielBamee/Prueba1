@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45010334, g: 0.49761105, b: 0.5618343, a: 1}
+  m_IndirectSpecularColor: {r: 0.45010293, g: 0.49761075, b: 0.5618339, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4334,7 +4334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelMeta: {fileID: 1381240014}
-  tuTiempo: {fileID: 0}
+  tuTiempo: {fileID: 612149575}
   tiempo: 0
   tiempoLogrado: {fileID: 1378986729}
 --- !u!1 &1646248885
