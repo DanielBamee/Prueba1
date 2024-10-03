@@ -7,7 +7,7 @@ public class DetectorMeta : MonoBehaviour
 {
     public GameObject panelMeta;
     [SerializeField]
-    public TextMeshProUGUI tiempoActual;
+    public TextMeshProUGUI tuTiempo;
     public float tiempo = 0;
     [SerializeField]
     public TextMeshProUGUI tiempoLogrado;
@@ -23,7 +23,7 @@ public class DetectorMeta : MonoBehaviour
             Debug.Log("¡Has llegado a la meta!");
             panelMeta.gameObject.SetActive(true);
             other.GetComponent<PlayerBehaviour>().enabled = false;
-            tiempoActual.text = "Este ha sido tu tiempo:";
+            tuTiempo.text = "Este ha sido tu tiempo:";
             tiempoLogrado.text = tiempo.ToString();
         }
     }

@@ -22,10 +22,9 @@ public class DetectorDeColisiones : MonoBehaviour
             {
                 gameObject.GetComponent<MeshRenderer>().material = materialBlanco;
                 paredRoja = false;
-                tiempoEnRojo = 0;
+                tiempoEnRojo = 5f;
             }
-        }
-            
+        }       
     }
 
     private void OnCollisionEnter(Collision detectorColision)
@@ -34,8 +33,6 @@ public class DetectorDeColisiones : MonoBehaviour
         {
             gameObject.GetComponent<MeshRenderer>().material = materialRojo;
             paredRoja=true;
-
         }
     }
-
 }

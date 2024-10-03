@@ -5,12 +5,12 @@ using TMPro;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    public float fuerzaDeSalto = 10f;
+    //public float fuerzaDeSalto = 10f;
     public float movimientoPj = 5f;
     public int contadorDeMonedas = 0;
     public int contadorEspecial = 0;
     private Rigidbody rbJugador;
-    public bool enElSuelo;
+    //public bool enElSuelo;
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI coinText2;
     public AudioClip specialCoinSFX;
@@ -42,13 +42,13 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Suelo"))
-        {
+        //if (other.gameObject.CompareTag("Suelo"))
+        //{
            // Debug.Log("Esta en el suelo");
-            enElSuelo = true;
-        }
-        else
-            enElSuelo = false;
+            //enElSuelo = true;
+        //}
+        //else
+            //enElSuelo = false;
 
         //moneda normal
         if (other.CompareTag("CoinItem"))
