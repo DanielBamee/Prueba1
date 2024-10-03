@@ -8,27 +8,30 @@ public class PlayerBehaviour : MonoBehaviour
     public float fuerzaDeSalto = 10f;
     public float movimientoPj = 5f;
     public int contadorDeMonedas = 0;
+    public int contadorEspecial = 0;
     private Rigidbody rbJugador;
     public bool enElSuelo;
     public TextMeshProUGUI coinText;
+    public TextMeshProUGUI coinText2;
     public AudioClip specialCoinSFX;
     public AudioClip coinSFX;
+    public GameObject puertaFinal;
 
     // Start is called before the first frame update
     private void Start()
     {
         rbJugador = GetComponent<Rigidbody>();
-        enElSuelo = false;
+        //enElSuelo = false;
     }
 
     // Update is called once per frame
     private void Update()
     {
         //Salto
-        if (Input.GetKeyDown(KeyCode.Space) && enElSuelo == true)
-        { 
-        rbJugador.AddForce(transform.up * fuerzaDeSalto, ForceMode.Impulse);
-        }
+       // if (Input.GetKeyDown(KeyCode.Space) && enElSuelo == true)
+       // { 
+       // rbJugador.AddForce(transform.up * fuerzaDeSalto, ForceMode.Impulse);
+       // }
 
         //Movimiento WASD
         Vector3 movement = new Vector3();
@@ -60,12 +63,17 @@ public class PlayerBehaviour : MonoBehaviour
             contadorDeMonedas = contadorDeMonedas + 5;
             Debug.Log("Ahora tienes " + contadorDeMonedas + " monedas");
             AudioSource.PlayClipAtPoint(specialCoinSFX, transform.position);
+            contadorEspecial = contadorEspecial + 1;
+            coinText2.text = "Monedas Unicas: " + contadorEspecial.ToString() + "/3";
         }
         if (other.tag.Contains("Coin"))
         {
             other.gameObject.SetActive(false);
             coinText.text = "Monedas: " + contadorDeMonedas.ToString();
         }
-        
+        if (contadorEspecial >= 3)
+        {
+            puertaFinal.SetActive(false);
+        }
     }
 }
